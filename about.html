@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ABC Fitness Studio | About & Contact</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="images/abc-logo-palette2.png" alt="ABC Fitness Studio logo">
+      <div>
+        <h1 style="margin:0;">ABC Fitness Studio</h1>
+        <p style="margin:.15rem 0 0 0;" class="helper">Balance • Harmony • Active Living</p>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html" aria-current="page">About &amp; Contact</a></li>
+        <li><a href="memberships.html">Memberships</a></li>
+        <li style="margin-left:auto;"><span class="badge">Cart: <span id="cartCount">0</span></span></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="card">
+  <h2>About ABC Fitness Studio</h2>
+  <p>We provide a welcoming environment for physical and mental wellness with classes like yoga, Pilates, Zumba, and kickboxing.</p>
+</section>
+<section class="card">
+  <h2>Contact Us (Feedback &amp; Custom Requests)</h2>
+  <p class="helper">Validates inputs and saves submissions to localStorage. A snapshot is displayed on Memberships.</p>
+  <form id="contactForm" novalidate>
+    <label for="fullName">Full Name</label>
+    <input id="fullName" type="text" required autocomplete="name">
+    <label for="email">Email</label>
+    <input id="email" type="email" required autocomplete="email">
+    <label for="requestType">Request Type</label>
+    <select id="requestType">
+      <option>Class Question</option><option>Membership Question</option><option>Personal Training Request</option>
+      <option>Equipment Purchase Question</option><option>General Feedback</option>
+    </select>
+    <label for="message">Message</label>
+    <textarea id="message" rows="6" required></textarea>
+    <p class="helper">At least 10 characters.</p>
+    <p><button class="btn primary" type="submit">Submit</button> <button class="btn" type="reset">Clear</button></p>
+    <p id="contactMsg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+<section class="card">
+  <h2>Saved Feedback (This Device)</h2>
+  <ul id="feedbackList"></ul>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <p><strong>ABC Fitness Studio</strong></p>
+    <p>Hours: Mon–Fri 6 a.m.–8 p.m. • Sat 8 a.m.–6 p.m. • Sun Closed</p>
+    <p>Phone: (555) 555-1234 • Address: 123 Wellness Way, Your City, ST</p>
+  </div>
+</footer>
+<script src="js/common.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>

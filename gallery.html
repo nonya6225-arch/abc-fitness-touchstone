@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ABC Fitness Studio | Gallery</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="images/abc-logo-palette2.png" alt="ABC Fitness Studio logo">
+      <div>
+        <h1 style="margin:0;">ABC Fitness Studio</h1>
+        <p style="margin:.15rem 0 0 0;" class="helper">Balance • Harmony • Active Living</p>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="about.html">About &amp; Contact</a></li>
+        <li><a href="memberships.html">Memberships</a></li>
+        <li style="margin-left:auto;"><span class="badge">Cart: <span id="cartCount">0</span></span></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="card">
+  <h2>Gallery</h2>
+  <p class="helper">3×3 table of client-provided images. Add to Cart uses sessionStorage.</p>
+  <p id="cartStatus" role="status" aria-live="polite"></p>
+  <table>
+    <caption>Classes and Products</caption>
+    <tr>
+      <td class="product"><img src="images/individual-yoga-session.png" alt="Individual yoga session"><p><strong>Individual Yoga Session</strong></p><p class="helper">$15.00</p>
+        <button class="btn primary" type="button" data-add data-id="yoga-ind" data-name="Individual Yoga Session" data-price="15">Add to Cart</button></td>
+      <td class="product"><img src="images/group-yoga-session.png" alt="Group yoga session"><p><strong>Group Yoga Session</strong></p><p class="helper">$10.00</p>
+        <button class="btn primary" type="button" data-add data-id="yoga-grp" data-name="Group Yoga Session" data-price="10">Add to Cart</button></td>
+      <td class="product"><img src="images/individual-pilates-session.png" alt="Individual Pilates session"><p><strong>Individual Pilates Session</strong></p><p class="helper">$18.00</p>
+        <button class="btn primary" type="button" data-add data-id="pilates-ind" data-name="Individual Pilates Session" data-price="18">Add to Cart</button></td>
+    </tr>
+    <tr>
+      <td class="product"><img src="images/group-pilates-session.png" alt="Group Pilates session"><p><strong>Group Pilates Session</strong></p><p class="helper">$12.00</p>
+        <button class="btn primary" type="button" data-add data-id="pilates-grp" data-name="Group Pilates Session" data-price="12">Add to Cart</button></td>
+      <td class="product"><img src="images/individual-kickboxing-session.png" alt="Individual kickboxing session"><p><strong>Individual Kickboxing Session</strong></p><p class="helper">$20.00</p>
+        <button class="btn primary" type="button" data-add data-id="kick-ind" data-name="Individual Kickboxing Session" data-price="20">Add to Cart</button></td>
+      <td class="product"><img src="images/group-kickboxing-session.png" alt="Group kickboxing session"><p><strong>Group Kickboxing Session</strong></p><p class="helper">$14.00</p>
+        <button class="btn primary" type="button" data-add data-id="kick-grp" data-name="Group Kickboxing Session" data-price="14">Add to Cart</button></td>
+    </tr>
+    <tr>
+      <td class="product"><img src="images/yoga-mat.png" alt="Yoga mat"><p><strong>Yoga Mat</strong></p><p class="helper">$25.00</p>
+        <button class="btn primary" type="button" data-add data-id="mat" data-name="Yoga Mat" data-price="25">Add to Cart</button></td>
+      <td class="product"><img src="images/water-bottle.png" alt="Water bottle"><p><strong>Water Bottle</strong></p><p class="helper">$12.00</p>
+        <button class="btn primary" type="button" data-add data-id="bottle" data-name="Water Bottle" data-price="12">Add to Cart</button></td>
+      <td class="product"><img src="images/tee-shirt.png" alt="Tee shirt"><p><strong>Tee Shirt</strong></p><p class="helper">$18.00</p>
+        <button class="btn primary" type="button" data-add data-id="tee" data-name="Tee Shirt" data-price="18">Add to Cart</button></td>
+    </tr>
+  </table>
+  <p><button id="viewCart" class="btn" type="button">View Cart</button></p>
+  <div id="cartArea" class="card" hidden>
+    <h3>Shopping Cart</h3>
+    <p id="cartMsg" role="status" aria-live="polite"></p>
+    <table aria-label="Cart items">
+      <thead><tr><th>Item</th><th>Price</th><th>Qty</th><th>Line Total</th></tr></thead>
+      <tbody id="cartBody"></tbody>
+      <tfoot><tr><th colspan="3" scope="row">Total</th><td id="cartTotal">$0.00</td></tr></tfoot>
+    </table>
+    <p><button id="processOrder" class="btn primary" type="button">Process Order</button> <button id="clearCart" class="btn" type="button">Clear Cart</button></p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <p><strong>ABC Fitness Studio</strong></p>
+    <p>Hours: Mon–Fri 6 a.m.–8 p.m. • Sat 8 a.m.–6 p.m. • Sun Closed</p>
+    <p>Phone: (555) 555-1234 • Address: 123 Wellness Way, Your City, ST</p>
+  </div>
+</footer>
+<script src="js/common.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
